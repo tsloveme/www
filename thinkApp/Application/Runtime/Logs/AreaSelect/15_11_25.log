@@ -245,3 +245,59 @@ NOTIC: [8] Undefined index: dey D:\Program Files\nightrain\www\thinkApp\ThinkPHP
 NOTIC: [8] Undefined index: extra D:\Program Files\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
 SQL: SELECT * FROM t_province  [ RunTime:0.0000s ]
 
+[ 2015-11-25T22:30:12+08:00 ] ::1 /thinkapp/AreaSelect/index/getProvince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001850s ]
+SQL: PRAGMA table_info( t_province ) [ RunTime:0.0032s ]
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+SQL: SELECT * FROM t_province  [ RunTime:0.0001s ]
+
+[ 2015-11-25T23:32:19+08:00 ] ::1 /thinkapp/AreaSelect/index/getProvince
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: PRAGMA table_info( t_province ) [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 42 行.
+NOTIC: [8] Undefined index: field D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 43 行.
+NOTIC: [8] Undefined index: null D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 45 行.
+NOTIC: [8] Undefined index: default D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 46 行.
+NOTIC: [8] Undefined index: dey D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 47 行.
+NOTIC: [8] Undefined index: extra D:\Program Files (x86)\nightrain\www\thinkApp\ThinkPHP\Library\Think\Db\Driver\Sqlite.class.php 第 48 行.
+SQL: SELECT * FROM t_province  [ RunTime:0.0001s ]
+
