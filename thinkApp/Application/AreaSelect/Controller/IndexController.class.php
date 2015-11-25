@@ -5,22 +5,22 @@ class IndexController extends Controller {
     public function index(){
         $citys = M('province');
         $data = $citys->select();
-        //print_r($data);
+        print_r($data);
         $this->display();
     }
-    //»ñÈ¡ËùÓÐÊ¡·Ý
+    //èŽ·å–æ‰€æœ‰çœä»½
     public function getProvince(){
         $city = M('Province');
         $data = $city->select();
         $this->ajaxReturn($data);
     }
-    //»ñÈ¡Ä³¸öÊ¡·ÝµÄËùÓÐÊÐ
+    //æ ¹æ®çœä»½èŽ·å–åŸŽå¸‚
     public function getCity($id){// /getCity?id=11 or /getCity/id/11
         $city = M('City');
         $data = $city->where('cityId='.$id)->select();
         $this->ajaxReturn($data);
     }
-    //»ñÈ¡Ä³¸öÊÐµÄËùÓÐÇøÓò
+    //æ ¹æ®åŸŽå¸‚èŽ·å–åœ°åŒº
     public function getZone($id){
         $zone = M('Zone');
         $data = $zone->where()->select();
