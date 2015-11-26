@@ -50,7 +50,7 @@ $(function(){
                     //select选中值变化时触发的事件
                     change:function(){
                     provinceChange($('#'+selectId).val());
-                }
+                    }
                 });
             }
         });
@@ -84,7 +84,7 @@ $(function(){
                 $('#'+selectId).vselect({
                     direction:'bottom',
                     change:function(){
-                    cityChange($('#'+selectId).val());
+                        cityChange($('#'+selectId).val());
                     }
                 });
             }
@@ -93,38 +93,44 @@ $(function(){
 
     //渲染地区 zoned:当前select选中的zoneId; cityId:所属城市id
     function renderZone(selectId,cityId,zoneId){
-        if(!cityId){
-            return;
-        }
+        var htmlStr = "";
+        htmlStr += '<select id="'+ selectId +'">';
+        htmlStr += '<option value="">请选地区</option>';
         var currentId;
         if(zoneId){
             currentId = zoneId.toString();
         }
         else{
-            id="";
+            currentId="";
         }
-        var htmlStr = "";
-        $.ajax({
-            url:'/thinkapp/AreaSelect/index/getZone?id='+cityId,
-            type:'get',
-            success:function(data){
-                htmlStr += '<select id="'+ selectId +'">';
-                htmlStr += '<option value="">请选择城市</option>';
-                for(var i=0; i<data.length; i++){
-                    htmlStr+='<option value="' + data[i].zoneid + '">'+ data[i].zonename +'</option>';
+        var appendAndRender = function(){
+            htmlStr += '</select>';
+            $('.zoneWrap').html(htmlStr);
+            $('#'+selectId).find('option[value="'+currentId+'"]').attr('selected',true);
+            $('#'+selectId).vselect({
+                direction:'bottom'
+            });
+        }
+        if(cityId){
+            $.ajax({
+                url:'/thinkapp/AreaSelect/index/getZone?id='+cityId,
+                type:'get',
+                success:function(data){
+                    for(var i=0; i<data.length; i++){
+                        htmlStr+='<option value="' + data[i].zoneid + '">'+ data[i].zonename +'</option>';
+                    }
+                    appendAndRender();
                 }
-                htmlStr += '</select>';
-                $('.zoneWrap').html(htmlStr);
-                $('#'+selectId).find('option[value="'+currentId+'"]').attr('selected',true);
-                $('#'+selectId).vselect({
-                    direction:'bottom'
-                });
-            }
-        });
+            });
+        }
+        else{
+            appendAndRender();
+        }
     }
     //select province 绑定事件
     function provinceChange(id){
         renderCity ('citySelect',id);
+        renderZone ('zoneSelect');
     }
      //select city 绑定事件
     function cityChange(id){
