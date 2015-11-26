@@ -25,7 +25,7 @@ $(function(){
             currentId = provinceId.toString();
         }
         else{
-            id="";
+            currentId="";
         }
         var htmlStr = "";
         $.ajax({
@@ -66,7 +66,7 @@ $(function(){
             currentId = cityId.toString();
         }
         else{
-            id="";
+            currentId="";
         }
         var htmlStr = "";
         $.ajax({
