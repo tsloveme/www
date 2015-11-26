@@ -20,9 +20,9 @@ $(function(){
 
     //渲染省份
     function renderProvince(selectId,provinceId){
-        var id;
+        var currentId;
         if(provinceId){
-            id = provinceId.toString();
+            currentId = provinceId.toString();
         }
         else{
             id="";
@@ -43,15 +43,18 @@ $(function(){
                 //拼装select
                 $('.provinceWrap').html(htmlStr);
                 //设置选中值
-                $('#'+selectId).find('option[value="'+id+'"]').attr('selected',true);
+                $('#'+selectId).find('option[value="'+currentId+'"]').attr('selected',true);
                 //重新美化美化
                 $('#'+selectId).vselect({
-                    direction:'bottom'
+                    direction:'bottom',
+                    //select选中值变化时触发的事件
+                    change:function(){
+                    provinceChange($('#'+selectId).val());
+                }
                 });
             }
         });
     }
-    renderProvince('provinceSelect',currentProvinceId);
 
     //渲染城市 cityId:当前select选中的cityId; provinceId:所属省份id
     function renderCity(selectId,provinceId,cityId){
@@ -79,12 +82,14 @@ $(function(){
                 $('.cityWrap').html(htmlStr);
                 $('#'+selectId).find('option[value="'+currentId+'"]').attr('selected',true);
                 $('#'+selectId).vselect({
-                    direction:'bottom'
+                    direction:'bottom',
+                    change:function(){
+                    cityChange($('#'+selectId).val());
+                    }
                 });
             }
         });
     }
-    renderCity ('citySelect',currentProvinceId,currentCityId);
 
     //渲染地区 zoned:当前select选中的zoneId; cityId:所属城市id
     function renderZone(selectId,cityId,zoneId){
@@ -117,6 +122,17 @@ $(function(){
             }
         });
     }
+    //select province 绑定事件
+    function provinceChange(id){
+        renderCity ('citySelect',id);
+    }
+     //select city 绑定事件
+    function cityChange(id){
+        renderZone ('zoneSelect',id);
+    }
+    //页面加载时初始化select;
+    renderProvince('provinceSelect',currentProvinceId);
+    renderCity ('citySelect',currentProvinceId,currentCityId);
     renderZone ('zoneSelect',currentCityId,currentZoneId);
 
 })

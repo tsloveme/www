@@ -3,19 +3,20 @@ namespace AreaSelect\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        $citys = M('province');
-        $data = $citys->select();
+        $province = M('province');
+        $data = $province->select();
         print_r($data);
         $this->display();
     }
-    //获取�?有省�?
+    //获取所有省份
     public function getProvince(){
         $city = M('Province');
         $data = $city->select();
         $this->ajaxReturn($data);
     }
     //根据省份获取城市
-    public function getCity($id){// /getCity?id=11 or /getCity/id/11
+    //通过url传参数 /getCity?id=11 or /getCity/id/11
+    public function getCity($id){
         $city = M('City');
         $data = $city->where('provinceId='.$id)->select();
         $this->ajaxReturn($data);
