@@ -24,7 +24,7 @@ app.controller('IndexController',function($scope,$http){
         $http.get(url + queryStr)
             .success(function(data,status){
                 $scope.data[type] = data;
-                callback && callback();
+                callback && callback(); // <＝>if(callback){callback()}
             });
     }
     $scope.getData('province','',function(){
