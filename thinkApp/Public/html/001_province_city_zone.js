@@ -70,7 +70,7 @@ $(function(){
         }
         var htmlStr = "";
         $.ajax({
-            url:'/thinkapp/AreaSelect/index/getCity?id='+provinceId,
+            url:'/thinkapp/AreaSelect/index/getCity?provinceid='+provinceId,
             type:'get',
             success:function(data){
                 htmlStr += '<select id="'+ selectId +'">';
@@ -113,7 +113,7 @@ $(function(){
         }
         if(cityId){
             $.ajax({
-                url:'/thinkapp/AreaSelect/index/getZone?id='+cityId,
+                url:'/thinkapp/AreaSelect/index/getZone?cityid='+cityId,
                 type:'get',
                 success:function(data){
                     for(var i=0; i<data.length; i++){

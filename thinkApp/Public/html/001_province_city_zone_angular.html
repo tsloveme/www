@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select省市区联动-angular</title>
+    <script src="../js/jquery1.8.3.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="001_province_city_zone_angular.js"></script>
+    <style>
+        body{padding:0 35px;}
+    </style>
+</head>
+<body ng-app="area">
+<h1>select省市区联动</h1>
+地址：
+<div ng-controller="IndexController" ng-init="provinceVal = '19'; cityVal = '200';zoneVal = '1739';">
+    province:{{provinceVal}};  city:{{cityVal}};  zone:{{zoneVal}};
+    <span class="provinceWrap">
+        <select name="" id="provinceSelect" ng-model="provinceVal" ng-change="getCitys()">
+            <option value="" selected="selected">请选择省份</option>
+            <option ng-model="data.province" ng-repeat="item in data.province" value="{{item.provinceid}}">{{item.provincename}}</option>
+        </select>
+    </span>
+
+    <span class="cityWrap">
+        <select name="" id="citySelect" ng-model="cityVal" ng-change="getZones()">
+            <option value="" selected="selected">请选择城市</option>
+            <option ng-model="data.city" ng-repeat="item in data.city" value="{{item.cityid}}">{{item.cityname}}</option>
+        </select>
+    </span>
+
+    <span class="zoneWrap">
+        <select name="" id="zoneSelect" ng-model="zoneVal">
+            <option value="" selected="selected">请选择地区</option>
+            <option ng-model="data.zone" ng-repeat="item in data.zone" value="{{item.zoneid}}">{{item.zonename}}</option>
+        </select>
+    </span>
+</div>
+</body>
+</html>

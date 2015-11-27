@@ -16,15 +16,15 @@ class IndexController extends Controller {
     }
     //根据省份获取城市
     //通过url传参数 /getCity?id=11 or /getCity/id/11
-    public function getCity($id){
+    public function getCity($provinceid){
         $city = M('City');
-        $data = $city->where('provinceId='.$id)->select();
+        $data = $city->where('provinceId='.$provinceid)->select();
         $this->ajaxReturn($data);
     }
     //根据城市获取地区
-    public function getZone($id){
+    public function getZone($cityid){
         $zone = M('Zone');
-        $data = $zone->where('cityId='.$id)->select();
+        $data = $zone->where('cityId='.$cityid)->select();
         $this->ajaxReturn($data);
     }
 
