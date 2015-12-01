@@ -11,14 +11,15 @@
         #line{width:15px; position: absolute; left:50%; margin-left:2px; cursor:e-resize; background-color: #e0e0e0; height:100%;}
         html,body{width:100%; height:100%;margin:0; padding:0;}
         #iframe{width:100%; height:100%; min-width: 200px;}
-
+        .runnerToolBar{text-align: right; height: 34px; position: relative; z-index: 10;}
+        .runnerToolBar button{border:0; background-color:#2E7CD8; color:white; height: 28px; cursor: pointer; margin: 3px 3px 0 0; border-radius: 3px;}
         body {
             overflow: hidden;
         }
         .ace_editor {
             border: 1px solid lightgray;
             margin: auto;
-            height: calc(100% - 30px);
+            height: calc(100% - 36px);
             width: 100%;
             position: absolute;
         }
@@ -26,11 +27,10 @@
 </head>
 <body>
 <div id="codeEditor" class="left">
-    <pre id="editor">
-    <?php
-    phpinfo();
-    ?>
-    </pre>
+    <div class="runnerToolBar">
+        <button id="run">运　行</button>
+    </div>
+    <pre id="editor"></pre>
 </div>
 <div id="line"></div>
 <div id="browser" class="right">
@@ -73,6 +73,7 @@
 </script>
 
 <script src="static/ace/ace.js"></script>
+<script src="static/jquery1.8.3.min.js"></script>
 <script>
     ace.require("ace/ext/language_tools");
     var editor = ace.edit("editor");
@@ -84,6 +85,9 @@
         enableLiveAutocompletion: false,
     });
     editor.setAutoScrollEditorIntoView(true);
+    $.get('get_file.php?file=demo.php',function(data){
+        editor.setValue(data);
+    });
 </script>
 </body>
 </html>
